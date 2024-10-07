@@ -1,0 +1,42 @@
+{
+	"name": "marks.nico.ismaili.de",
+	"description": "SSG for my public bookmarks page",
+	"author": {
+		"name": "Nico Ismaili"
+	},
+	"version": "0.0.1",
+	"dependencies": {
+		"@astrojs/check": "^0.9.0",
+		"astro": "^4.4.11",
+		"commitlint": "^19.5.0",
+		"eslint": "^9.12.0"
+	},
+	"devDependencies": {
+		"@nico-i/ts-config": "^1.0.0",
+		"lint-staged": "^15.2.10"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"test": "bun test",
+		"test:watch": "bun run test -- --watch",
+		"astro": "astro",
+		"prepare": "husky || true",
+		"lint": "eslint .",
+		"lint:types": "tsc --noEmit --incremental false",
+		"lint:fix": "eslint --fix .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"type": "module",
+	"lint-staged": {
+		"*.{js,ts,jsx,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"*.json": [
+			"prettier --write"
+		]
+	}
+}
