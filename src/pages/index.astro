@@ -1,6 +1,9 @@
 ---
 import { FSBookmarkRepo } from "@/infrastructure/persistance/adapters/fs/FSBookmarkRepo"
 import bkmks from '../../public/bookmarks.json'
+import { Folder as BookmarkFolder } from "@/domain/value-objects/folder"
+import Folder from "@/components/Folder.astro"
+import Bookmark from "@/components/Bookmark.astro"
 
 const repo = new FSBookmarkRepo(bkmks)
 const bkmksRoot = await repo.getRoot()
@@ -14,14 +17,29 @@ const bkmksRoot = await repo.getRoot()
 		<meta name="generator" content={Astro.generator} />
 		<title>Nico Ismaili | Bookmarks</title>
 	</head>
-	<body>
-		<h1>Welcome to Nico Ismaili | Bookmarks!</h1>
-        {
-           bkmksRoot.map((child) => {
-                return (
-                    <h2>{child.name}</h2>
-                )
-           })
-        }
+	<body
+        style={{
+                fontFamily: 'monospace',
+            }}
+    >
+        <main
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+            }}
+        >
+            <span>.</span>
+            {
+                bkmksRoot.map((child) => {
+                    const isLastChild = bkmksRoot.indexOf(child) === bkmksRoot.length - 1;
+
+                if (child instanceof BookmarkFolder) {
+                    return <Folder isLastInRootFolder={isLastChild} depth={0} folder={child} isLastChild={isLastChild} isInLastFolder={true}/>
+                } else {
+                    return <Bookmark isLastInRootFolder={isLastChild} bookmark={child} isLastChild={isLastChild} depth={0} isInLastFolder={true}/>
+                }
+            })
+            }
+        </main>
 	</body>
 </html>

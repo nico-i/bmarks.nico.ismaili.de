@@ -1,0 +1,32 @@
+---
+import LineIndicator from '@/components/LineIndicator.astro';
+import { Bookmark as DataBookmark } from '@/domain/entities/bookmark';
+
+interface Props {
+    bookmark: DataBookmark;
+    isLastChild: boolean;
+    isInLastFolder: boolean;
+    isLastInRootFolder: boolean;
+    depth: number;
+    path?: string;
+}
+
+const { bookmark, path, depth, isLastChild, isInLastFolder,isLastInRootFolder} = Astro.props;
+const bookmarkPath = `${path ? `/${path}` : ''}${bookmark.name}`;
+---
+<div
+    id={bookmarkPath}
+    style={{
+            whiteSpace: 'nowrap',
+    }}
+>
+    <LineIndicator isLastChild={isLastChild} depth={depth} isInLastFolder={isInLastFolder} isLastInRootFolder={isLastInRootFolder} />
+    <a 
+        href={bookmark.url.toString()}
+        referrerpolicy="no-referrer"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        {bookmark.name}
+    </a>
+</div>

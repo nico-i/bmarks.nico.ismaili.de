@@ -1,12 +1,17 @@
 import { Bookmark, isBookmarkJson } from "@/domain/entities/bookmark/Bookmark";
 import { InvalidBookmarkJSONError } from "@/domain/entities/bookmark/exceptions/InvalidBookmarkJSONError";
 import { InvalidFolderJsonError } from "@/domain/value-objects/folder/exceptions/InvalidFolderJsonError";
+import { RequireChildrenError } from "@/domain/value-objects/folder/exceptions/RequireChildrenError";
 
 export class Folder {
 	constructor(
 		public readonly name: string,
 		public readonly children: (Bookmark | Folder)[]
-	) {}
+	) {
+		if (this.children.length === 0) {
+			throw new RequireChildrenError();
+		}
+	}
 
 	public static fromJson(obj: unknown): Folder {
 		if (isFolderJson(obj)) {
