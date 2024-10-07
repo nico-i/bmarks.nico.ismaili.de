@@ -1,5 +1,9 @@
 ---
+import { FSBookmarkRepo } from "@/infrastructure/persistance/adapters/fs/FSBookmarkRepo"
+import bkmks from '../../public/bookmarks.json'
 
+const repo = new FSBookmarkRepo(bkmks)
+const bkmksRoot = await repo.getRoot()
 ---
 
 <html lang="en">
@@ -12,5 +16,12 @@
 	</head>
 	<body>
 		<h1>Welcome to Nico Ismaili | Bookmarks!</h1>
+        {
+           bkmksRoot.map((child) => {
+                return (
+                    <h2>{child.name}</h2>
+                )
+           })
+        }
 	</body>
 </html>

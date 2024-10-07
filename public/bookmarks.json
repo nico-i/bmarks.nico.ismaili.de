@@ -1,0 +1,627 @@
+{
+	"created": "2024-10-07T09:41:24.189337",
+	"bookmarks": [
+		{
+			"name": "Productivity",
+			"children": [
+				{
+					"name": "Tools",
+					"children": [
+						{
+							"name": "LLMs",
+							"children": [
+								{
+									"name": "Claude Workbench",
+									"url": "https://console.anthropic.com/workbench"
+								},
+								{ "name": "ChatGPT", "url": "https://chat.openai.com/?model=gpt-4" },
+								{ "name": "Groq", "url": "https://groq.com/" }
+							]
+						},
+						{ "name": "Pomodoro Timer", "url": "https://pomofocus.io/" },
+						{
+							"name": "DeepL | AI Translations",
+							"url": "https://www.deepl.com/translator"
+						},
+						{
+							"name": "Microsoft ToDo",
+							"url": "https://to-do.office.com/tasks/AAMkADIxZDBiNDkzLTE5M2MtNGQwNy1hN2Q0LTQ1Yjk1M2JlZGJjYwAuAAAAAACnDQgq8R-nSYmwj4A_D5CvAQA4MEgk0lKoQLN4yyXsttZlAAGQhaWNAAA=?ru=https%3A%2F%2Fto-do.office.com%2Ftasks%2F"
+						},
+						{
+							"name": "ToDoVodo | Microsoft ToDo to CSV Exporter",
+							"url": "https://www.todovodo.com/"
+						},
+						{ "name": "ChatPDF | Summarize PDFs", "url": "https://www.chatpdf.com/" }
+					]
+				},
+				{
+					"name": "Practice",
+					"children": [
+						{ "name": "Typing.com", "url": "https://www.typing.com/student/lessons" },
+						{ "name": "10FastFingers.com", "url": "https://10fastfingers.com/" }
+					]
+				}
+			]
+		},
+		{
+			"name": "Dev",
+			"children": [
+				{
+					"name": "Tools",
+					"children": [
+						{
+							"name": "Utility Websites",
+							"children": [
+								{ "name": "Squoosh | Compress Images", "url": "https://squoosh.app/" },
+								{
+									"name": "Favicon Generator for perfect icons on all browsers",
+									"url": "https://realfavicongenerator.net/"
+								},
+								{
+									"name": "Online @font-face generator — Transfonter",
+									"url": "https://transfonter.org/"
+								},
+								{
+									"name": "QR Code Generator",
+									"url": "https://www.the-qrcode-generator.com/"
+								},
+								{ "name": "SVG Minifier", "url": "https://www.svgminify.com/" },
+								{ "name": "Shields.io | README shields", "url": "https://shields.io/" },
+								{
+									"name": "Code Snippet to Rich Text Converter",
+									"url": "https://tohtml.com/"
+								},
+								{ "name": "Vercel V0 | Generate UI", "url": "https://v0.dev/" },
+								{
+									"name": "shadcn/ui | Component snippets",
+									"url": "https://ui.shadcn.com/"
+								},
+								{
+									"name": "Pretty Dir Tree Editor",
+									"url": "https://tree.nathanfriend.io/"
+								}
+							]
+						},
+						{
+							"name": "Useful Libs",
+							"children": [
+								{
+									"name": "Docosaurus | Create Documentation Websites fast",
+									"url": "http://docusaurus.io/"
+								},
+								{
+									"name": "Browsersync - Time-saving synchronised browser testing",
+									"url": "https://browsersync.io/"
+								},
+								{
+									"name": "All country flags (accurate and complete) in SVG and PNG",
+									"url": "https://hampusborgos.github.io/country-flags/"
+								}
+							]
+						},
+						{
+							"name": "Diagrams",
+							"children": [
+								{ "name": "diagrams.net", "url": "https://app.diagrams.net/" },
+								{ "name": "SequenceDiagram.org", "url": "https://sequencediagram.org/" }
+							]
+						},
+						{
+							"name": "CMS Solutions",
+							"children": [
+								{
+									"name": "Tina CMS | Inline git based CMS",
+									"url": "https://tina.io/"
+								},
+								{
+									"name": "Medusa - Building blocks for digital commerce",
+									"url": "https://medusajs.com/"
+								},
+								{
+									"name": "Open-Source Serverless CMS for Enterprises - Headless CMS & Page Builder",
+									"url": "https://www.webiny.com/"
+								}
+							]
+						},
+						{
+							"name": "Analytics",
+							"children": [
+								{
+									"name": "Freshpaint",
+									"url": "https://app.freshpaint.io/events/schema"
+								},
+								{
+									"name": "WebPageTest - Website Performance and Optimization Test",
+									"url": "https://www.webpagetest.org/"
+								}
+							]
+						},
+						{
+							"name": "Webscraping",
+							"children": [
+								{
+									"name": "Zyte (formerly Scrapinghub) #1 Web Scraping Service",
+									"url": "https://www.zyte.com/?utm_campaign=BRA&utm_activity=TPC&utm_medium=REF&utm_source=GIT&utm_content=GitStu&utm_primary=SCL&utm_goal=SIN"
+								},
+								{
+									"name": "Free Email Extractor Software Download",
+									"url": "https://emailextractorpro.com/"
+								},
+								{
+									"name": "Apify SDK · The scalable web crawling, scraping and automation library for JavaScript/Node.js.",
+									"url": "https://sdk.apify.com/versions"
+								}
+							]
+						},
+						{
+							"name": "Code Health",
+							"children": [
+								{
+									"name": "Blackfire | Webapp profiling",
+									"url": "https://blackfire.io/my/environments"
+								},
+								{
+									"name": "ismailinico/nico.ismaili.de • DeepSource",
+									"url": "https://deepsource.io/gh/ismailinico/nico.ismaili.de"
+								},
+								{
+									"name": "Mend Renovate Portal - Home",
+									"url": "https://developer.mend.io/"
+								}
+							]
+						},
+						{
+							"name": "Hosting",
+							"children": [
+								{
+									"name": "namecheap",
+									"url": "https://ap.www.namecheap.com/domains/domaincontrolpanel/inico.dev/domain"
+								},
+								{
+									"name": "Google Cloud Pricing Calculator",
+									"url": "https://cloud.google.com/products/calculator#tab=identity-platform"
+								}
+							]
+						},
+						{
+							"name": "DevOps",
+							"children": [
+								{
+									"name": "K9s - Manage Your Kubernetes Clusters In Style",
+									"url": "https://k9scli.io/"
+								}
+							]
+						},
+						{
+							"name": "SCRUM",
+							"children": [
+								{ "name": "Pointing Poker", "url": "https://www.pointingpoker.com/" }
+							]
+						}
+					]
+				},
+				{
+					"name": "Education",
+					"children": [
+						{ "name": "Developer Roadmaps", "url": "https://roadmap.sh/" },
+						{
+							"name": "Learn X in Y minutes",
+							"url": "https://learnxinyminutes.com/"
+						},
+						{
+							"name": "CSS for JavaScript Developers • Josh W Comeau's Course Platform",
+							"url": "https://courses.joshwcomeau.com/css-for-js"
+						},
+						{
+							"name": "Developer Way: Advanced patterns for Frontend developers",
+							"url": "https://www.developerway.com/posts?filter=re-renders"
+						},
+						{
+							"name": "Let’s Talk about Re-renders by Nadia Makarevich - GitNation",
+							"url": "https://portal.gitnation.org/contents/lets-talk-about-re-renders"
+						},
+						{
+							"name": "ProgrammingPercy | DDD in Go",
+							"url": "https://programmingpercy.tech/blog/how-to-domain-driven-design-ddd-golang/"
+						},
+						{ "name": "The Odin Project", "url": "https://www.theodinproject.com/" },
+						{
+							"name": "Sane GitHub Labels | by Dave Lunny | Medium",
+							"url": "https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63"
+						},
+						{ "name": "Oh Shit, Git!?!", "url": "https://ohshitgit.com/" },
+						{
+							"name": "VSCode Emmet Cheatsheet",
+							"url": "https://docs.emmet.io/cheat-sheet/"
+						},
+						{
+							"name": "Can we use Netlify free plan for commercial purposes? - Admin - Netlify Support Forums",
+							"url": "https://answers.netlify.com/t/can-we-use-netlify-free-plan-for-commercial-purposes/41545"
+						},
+						{ "name": "The Open Graph protocol", "url": "https://ogp.me/" },
+						{
+							"name": "Bejamas | Framework Comparison",
+							"url": "https://bejamas.io/compare/"
+						},
+						{
+							"name": "Forms setup | Netlify Docs",
+							"url": "https://docs.netlify.com/forms/setup/"
+						}
+					]
+				},
+				{
+					"name": "Inspiration",
+					"children": [
+						{
+							"name": "Yasoob Khalid | Scraping and Go Blogger",
+							"url": "https://yasoob.me/"
+						},
+						{ "name": "itch.io | Game Jams", "url": "https://itch.io/jams" },
+						{
+							"name": "I Made Minecraft, but It's 4D - YouTube",
+							"url": "https://www.youtube.com/watch?v=u8LMyWcKL_c"
+						},
+						{
+							"name": "Free Frontend | HTML, CSS Code Snippets",
+							"url": "https://freefrontend.com/"
+						}
+					]
+				},
+				{
+					"name": "Practice",
+					"children": [
+						{
+							"name": "10,000+ Coding Practice Challenges // Edabit",
+							"url": "https://edabit.com/challenges"
+						},
+						{
+							"name": "Frontend Mentor | Front-end coding challenges using a real-life workflow",
+							"url": "https://www.frontendmentor.io/"
+						},
+						{
+							"name": "Kaggle Competitions | Attempt to build the best AI model",
+							"url": "https://www.kaggle.com/competitions"
+						},
+						{
+							"name": "Codewell | Improve your HTML, CSS, and JavaScript skills by practicing on real design templates.",
+							"url": "https://www.codewell.cc/"
+						},
+						{
+							"name": "CodingBat | Coding Refreshers for Python & Java",
+							"url": "https://codingbat.com/"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Design",
+			"children": [
+				{
+					"name": "3D Modeling",
+					"children": [
+						{
+							"name": "Poly Haven | CC0 Models, HDRIs and textures",
+							"url": "https://polyhaven.com/"
+						}
+					]
+				},
+				{
+					"name": "Illustrations",
+					"children": [
+						{
+							"name": "Humaaans | Minimalist human illustration elements",
+							"url": "https://www.humaaans.com/"
+						},
+						{
+							"name": "Worldvectorlogo | Brand logos",
+							"url": "https://worldvectorlogo.com/"
+						}
+					]
+				},
+				{
+					"name": "Inspiration",
+					"children": [
+						{
+							"name": "Dribbble | Designer Platform",
+							"url": "https://dribbble.com/"
+						},
+						{
+							"name": "Brun Simon CV | Interactive 3D car CV",
+							"url": "https://bruno-simon.com/"
+						},
+						{
+							"name": "Glitch link hover effect",
+							"url": "https://fabianirsara.com/"
+						},
+						{
+							"name": "Good freelance contact form fields",
+							"url": "https://www.lukesummerhayes.com/contact-us"
+						}
+					]
+				},
+				{
+					"name": "Materials",
+					"children": [
+						{
+							"name": "Fonts",
+							"children": [
+								{
+									"name": "100 Best Free Fonts for Designers in 2021",
+									"url": "https://www.awwwards.com/best-free-fonts.html"
+								},
+								{
+									"name": "Free Font projects on Behance",
+									"url": "https://www.behance.net/search/projects/?sort=appreciations&time=week&search=free%20font"
+								},
+								{
+									"name": "Font Squirrel | Free Fonts! Legit Free & Quality",
+									"url": "https://www.fontsquirrel.com/"
+								},
+								{
+									"name": "befonts | Free Fonts for Designers",
+									"url": "https://befonts.com/"
+								}
+							]
+						},
+						{
+							"name": "Images",
+							"children": [
+								{
+									"name": "Distributors",
+									"children": [
+										{
+											"name": "Shutterstock",
+											"url": "https://submit.shutterstock.com/dashboard?language=en"
+										},
+										{
+											"name": "Adobe Stock",
+											"url": "https://contributor.stock.adobe.com/de/portfolio"
+										},
+										{ "name": "500px", "url": "https://500px.com/" }
+									]
+								},
+								{ "name": "Unsplash", "url": "https://unsplash.com/" }
+							]
+						},
+						{
+							"name": "Mockups",
+							"children": [
+								{
+									"name": "Free Mockup Zone | Free Mockups",
+									"url": "https://freemockupzone.com/"
+								}
+							]
+						},
+						{
+							"name": "Palettes",
+							"children": [
+								{
+									"name": "Coolors | Color Palette Generator",
+									"url": "https://coolors.co/"
+								},
+								{
+									"name": "Khroma | AI powered color palette generator",
+									"url": "http://khroma.co/"
+								}
+							]
+						},
+						{
+							"name": "Video",
+							"children": [
+								{ "name": "CC0 Videos", "url": "https://cutestockfootage.com/" },
+								{ "name": "Pexels", "url": "https://www.pexels.com/" }
+							]
+						},
+						{
+							"name": " Theme-UI | Free UI Kits, UI Design Resources, Icons & More",
+							"url": "https://themeui.net/"
+						},
+						{
+							"name": "Free Resources From All Around The Web - Cute Stock Footage",
+							"url": "https://cutestockfootage.com/free"
+						},
+						{
+							"name": "Icons",
+							"children": [
+								{
+									"name": "Tabler Icons: over 2900 vector icons for web design",
+									"url": "https://tabler-icons.io/"
+								},
+								{ "name": "Lucide", "url": "https://lucide.dev/" }
+							]
+						}
+					]
+				},
+				{
+					"name": "Practice",
+					"children": [
+						{
+							"name": "Method of Action | Free Games to learn Vector Design",
+							"url": "https://method.ac/"
+						}
+					]
+				},
+				{
+					"name": "Tools",
+					"children": [
+						{
+							"name": "Pure CSS Generator for Box Shadows",
+							"url": "https://www.joshwcomeau.com/shadow-palette/"
+						},
+						{
+							"name": "rawpixel | Free design elements",
+							"url": "https://www.rawpixel.com/"
+						},
+						{
+							"name": "Web Design Checklist | Best design practices",
+							"url": "https://www.checklist.design/"
+						},
+						{
+							"name": "Haikei | Website Background Generator",
+							"url": "https://app.haikei.app/"
+						},
+						{
+							"name": "Synthesia | Generate video with live human commentator with AI",
+							"url": "https://www.synthesia.io/"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Making",
+			"children": [
+				{
+					"name": "3D Printing",
+					"children": [
+						{
+							"name": "Calibration",
+							"children": [
+								{
+									"name": "Teaching Tech Calibration Guide",
+									"url": "https://teachingtechyt.github.io/calibration.html"
+								},
+								{
+									"name": "Retraction Calibration Tool",
+									"url": "http://retractioncalibration.com/"
+								}
+							]
+						},
+						{
+							"name": "Models",
+							"children": [
+								{ "name": "Thingiverse", "url": "https://www.thingiverse.com/" },
+								{ "name": "Printables.com", "url": "https://www.printables.com/" },
+								{
+									"name": "yeggi - 3D Printer Models Search Engine",
+									"url": "https://www.yeggi.com/"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "CAD",
+					"children": [
+						{
+							"name": "Onshape | Cloud-based CAD",
+							"url": "https://www.onshape.com/en/"
+						},
+						{
+							"name": "MotionGen Pro | Simulate kinematic joints",
+							"url": "https://motiongen.io/"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Music",
+			"children": [
+				{
+					"name": "Commercial Licensed Music",
+					"children": [
+						{
+							"name": "Prod. Riddiman | LoFi Free Commercial License music",
+							"url": "https://www.youtube.com/channel/UCdSuKogXJOZld5Dzw_9285w"
+						},
+						{
+							"name": "Schlatt & Ludwigs free for commercial use orchestra music",
+							"url": "https://pmmusic.pro/downloads/"
+						},
+						{
+							"name": "Our Music Box | Free or cheap music for commercial use",
+							"url": "https://www.our-music-box.com/"
+						}
+					]
+				},
+				{
+					"name": "Education",
+					"children": [
+						{
+							"name": "Syntorial | Learn how to program synths",
+							"url": "https://www.syntorial.com/"
+						}
+					]
+				},
+				{
+					"name": "Online Instruments",
+					"children": [
+						{
+							"name": "Leshy SFMaker | 8 Bit SFX Generator",
+							"url": "https://www.leshylabs.com/apps/sfMaker/"
+						},
+						{
+							"name": "Ambient sound creator + mixer",
+							"url": "https://www.ambient-mixer.com/"
+						}
+					]
+				},
+				{
+					"name": "Ultimate Guitar | Guitar tabs",
+					"url": "https://www.ultimate-guitar.com/"
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"children": [
+				{
+					"name": "MuscleWiki | Free workout generator and exercise tutorials",
+					"url": "https://musclewiki.org/"
+				}
+			]
+		},
+		{
+			"name": "Shopping",
+			"children": [
+				{
+					"name": "Photography",
+					"children": [
+						{
+							"name": "Foto Koeberl | Second hand photography web shop",
+							"url": "https://fk-secondhand.com/"
+						},
+						{
+							"name": "Fotoimpex Berlin | Analogue photography",
+							"url": "https://www.fotoimpex.de/"
+						}
+					]
+				},
+				{
+					"name": "Travel",
+					"children": [
+						{
+							"name": "Urlaubspiraten | Travel deals",
+							"url": "https://www.urlaubspiraten.de/"
+						},
+						{
+							"name": "RV Parking and campsite finder",
+							"url": "https://stellplatz.info/"
+						},
+						{
+							"name": "Pitchup | Easily find campsites",
+							"url": "https://www.pitchup.com/"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Entertainment",
+			"children": [
+				{
+					"name": "Games",
+					"children": [
+						{
+							"name": "Cards Against Humanity",
+							"url": "https://pyx-1.pretendyoure.xyz/zy/game.jsp"
+						},
+						{ "name": "Adobe Crossword", "url": "https://zed0.co.uk/crossword/" }
+					]
+				}
+			]
+		}
+	]
+}
