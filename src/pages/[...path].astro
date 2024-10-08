@@ -9,7 +9,6 @@ import { convertNameToSlug } from "@/helper/getNormalizedPath";
 import { Bookmark } from "@/domain/entities/bookmark";
 import { GetStaticPathsResult } from "astro";
 import Icon from "@/components/Icon.astro";
-import { slide } from "astro:transitions";
 
 export async function getStaticPaths() {
 	const repo = new FSBookmarkRepo(bkmks);
