@@ -15,7 +15,7 @@ const rangeArray = Array(depth).fill(0);
     {rangeArray.map((_, index) => {
         const isSecondLastIndex = index === depth - 1;
         if((isInLastFolder && isSecondLastIndex) || (isLastInRootFolder && index == 0) ) {
-           return <><Spacing /></>
+           return <>&nbsp;<Spacing /></>
         }
         return <>│<Spacing /></>
     })}
