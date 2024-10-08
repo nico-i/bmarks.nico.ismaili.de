@@ -1,0 +1,31 @@
+---
+type IconType = "folder" | "open-folder" | "globe" | "moon" | "sun" | "back";
+
+interface Props {
+	icon: IconType;
+	size: string;
+	className?: string;
+}
+
+const { icon, className, size } = Astro.props;
+
+const iconClassByIconType: Record<IconType, string> = {
+	folder: "folder-icon",
+	"open-folder": "folder-open-icon",
+	globe: "globe-icon",
+	sun: "sun-icon",
+	moon: "moon-icon",
+	back: "back-icon",
+};
+
+const iconClass = iconClassByIconType[icon];
+---
+
+<div
+	class:list={[iconClass, "bg-cover bg-text dark:bg-dark-text", className]}
+	style={{
+		width: size,
+		height: size,
+	}}
+>
+</div>

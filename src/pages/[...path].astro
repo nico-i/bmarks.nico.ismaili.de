@@ -1,0 +1,140 @@
+---
+import "../base.css";
+import { FSBookmarkRepo } from "@/infrastructure/persistance/adapters/fs/FSBookmarkRepo";
+import bkmks from "../../public/bookmarks.json";
+import { Folder } from "@/domain/value-objects/folder";
+import FolderComp from "@/components/Folder.astro";
+import BookmarkComp from "@/components/Bookmark.astro";
+import { convertNameToSlug } from "@/helper/getNormalizedPath";
+import { Bookmark } from "@/domain/entities/bookmark";
+import { GetStaticPathsResult } from "astro";
+import Icon from "@/components/Icon.astro";
+import { slide } from "astro:transitions";
+
+export async function getStaticPaths() {
+	const repo = new FSBookmarkRepo(bkmks);
+	const bkmksRoot = await repo.getRoot();
+
+	function recGetFolderStaticPaths(
+		folder: Folder,
+		path: string
+	): GetStaticPathsResult {
+		const slug = convertNameToSlug(folder.name);
+		const folderPath = `${path}${slug}/`;
+
+		const paths: GetStaticPathsResult = [
+			{
+				params: {
+					path: folderPath,
+				},
+				props: {
+					folder,
+					slug,
+				},
+			},
+		];
+
+		for (const child of folder.children) {
+			if (child instanceof Bookmark) {
+				continue;
+			}
+			paths.push(...recGetFolderStaticPaths(child, folderPath));
+		}
+
+		return paths;
+	}
+
+	const rootFolder = new Folder("", bkmksRoot);
+
+	const paths = recGetFolderStaticPaths(rootFolder, "");
+
+	return paths;
+}
+
+interface Props {
+	folder: Folder;
+	slug: string;
+}
+
+const { path } = Astro.params;
+const { folder, slug } = Astro.props;
+
+const parentPath =
+	"/" + (typeof path === "string" ? path.replace(slug, "") : "");
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Nico Ismaili | Bookmarks</title>
+	</head>
+	<body
+		class="w-full flex flex-col items-center text-lg dark:bg-stone-900 dark:text-neutral-200 bg-bg dark:bg-dark-bg text-text dark:text-dark-text transition-colors"
+	>
+		<main class="flex flex-col w-full max-w-screen-sm pt-16 gap-2 px-8">
+			<div class="flex justify-between items-center pb-8 gap-1.5">
+				{
+					typeof path === "string" ? (
+						<a href={parentPath}>
+							<Icon icon="back" size="2rem" />
+						</a>
+					) : (
+						<div class="w-8" />
+					)
+				}
+				<h1 class="text-4xl font-bold text-center">
+					{folder.name === "" ? "Bookmarks" : folder.name}
+				</h1>
+				<button id="view-mode">
+					<Icon icon="moon" size="2rem" className="dark:sun-icon" />
+				</button>
+			</div>
+			{
+				folder.children.map((child) => {
+					if (child instanceof Folder) {
+						return (
+							<FolderComp
+								folder={child}
+								path={typeof path === "string" ? path : null}
+							/>
+						);
+					}
+					return <BookmarkComp bookmark={child} />;
+				})
+			}
+		</main>
+	</body>
+	<script>
+		function setTheme(theme: "dark" | "light") {
+			if (theme === "dark") {
+				document.documentElement.classList.add("dark");
+				localStorage.theme = "dark";
+			} else {
+				document.documentElement.classList.remove("dark");
+				localStorage.theme = "light";
+			}
+		}
+
+		if (
+			localStorage.theme === "dark" ||
+			(!("theme" in localStorage) &&
+				window.matchMedia("(prefers-color-scheme: dark)").matches)
+		) {
+			setTheme("dark");
+		} else {
+			setTheme("light");
+		}
+
+		const btn = document.getElementById("view-mode");
+
+		btn?.addEventListener("click", function () {
+			if (document.documentElement.classList.contains("dark")) {
+				setTheme("light");
+			} else {
+				setTheme("dark");
+			}
+		});
+	</script>
+</html>

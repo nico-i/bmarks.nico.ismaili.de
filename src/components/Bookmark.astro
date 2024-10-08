@@ -1,32 +1,36 @@
 ---
-import LineIndicator from '@/components/LineIndicator.astro';
-import { Bookmark as DataBookmark } from '@/domain/entities/bookmark';
+import Icon from "@/components/Icon.astro";
+import IconText from "@/components/IconText.astro";
+import { Bookmark as DataBookmark } from "@/domain/entities/bookmark";
+import { getFaviconUrl } from "@/helper/getFaviconUrl";
 
 interface Props {
-    bookmark: DataBookmark;
-    isLastChild: boolean;
-    isInLastFolder: boolean;
-    isLastInRootFolder: boolean;
-    depth: number;
-    path?: string;
+	bookmark: DataBookmark;
 }
 
-const { bookmark, path, depth, isLastChild, isInLastFolder,isLastInRootFolder} = Astro.props;
-const bookmarkPath = `${path ? `/${path}` : ''}${bookmark.name}`;
+const { bookmark } = Astro.props;
+const faviconUrl = await getFaviconUrl(bookmark.url);
 ---
-<div
-    id={bookmarkPath}
-    style={{
-            whiteSpace: 'nowrap',
-    }}
+
+<a
+	href={bookmark.url.toString()}
+	referrerpolicy="no-referrer"
+	target="_blank"
+	rel="noopener noreferrer"
+	class="flex items-center gap-1.5"
+	title={bookmark.name}
 >
-    <LineIndicator isLastChild={isLastChild} depth={depth} isInLastFolder={isInLastFolder} isLastInRootFolder={isLastInRootFolder} />
-    <a 
-        href={bookmark.url.toString()}
-        referrerpolicy="no-referrer"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        {bookmark.name}
-    </a>
-</div>
+	<IconText text={bookmark.name}>
+		{
+			faviconUrl !== null ? (
+				<img
+					class="w-6 aspect-square"
+					src={faviconUrl}
+					alt={`Favicon for ${bookmark.name}`}
+				/>
+			) : (
+				<Icon icon="globe" size="1.5rem" />
+			)
+		}
+	</IconText>
+</a>

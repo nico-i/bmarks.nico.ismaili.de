@@ -1,0 +1,14 @@
+---
+interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div
+	class="flex items-center gap-2 overflow-hidden truncate hover:underline underline-offset-2 decoration-2"
+>
+	<slot />
+	<span class="truncate">{text}</span>
+</div>

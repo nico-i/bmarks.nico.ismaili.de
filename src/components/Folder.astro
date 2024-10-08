@@ -1,40 +1,22 @@
 ---
-import Bookmark from '@/components/Bookmark.astro';
-import LineIndicator from '@/components/LineIndicator.astro';
-import { Folder as BookmarkFolder } from '@/domain/value-objects/folder';
+import Icon from "@/components/Icon.astro";
+import IconText from "@/components/IconText.astro";
+import { Folder as BookmarkFolder } from "@/domain/value-objects/folder";
+import { convertNameToSlug } from "@/helper/getNormalizedPath";
 
 interface Props {
-    path?: string;
-    depth: number;
-    folder: BookmarkFolder;
-    isLastChild: boolean;
-    isInLastFolder: boolean;
-    isLastInRootFolder: boolean;
+	path: string | null;
+	folder: BookmarkFolder;
 }
 
-const { folder, depth, path, isLastChild, isInLastFolder,  isLastInRootFolder } = Astro.props;
-const folderPath = `${path ? `/${path}` : ''}${folder.name}`;
+const { folder, path } = Astro.props;
+
+const folderSlug = convertNameToSlug(folder.name);
+const folderUrl = `${typeof path === "string" ? `/${path}/` : "/"}${folderSlug}`;
 ---
 
-<details id={folderPath}>
-  <summary
-    style={{
-      cursor: 'pointer',
-      listStyle: 'none',    whiteSpace: 'nowrap',
-    }}
-  >
-  <LineIndicator depth={depth} isLastChild={isLastChild} isInLastFolder={isInLastFolder} isLastInRootFolder={isLastInRootFolder} />
-  {folder.name}/
-</summary>
-   {
-           folder.children.map((child) => {
-            const isLastChildOfChildren = folder.children.indexOf(child) === folder.children.length - 1;
-
-             if (child instanceof BookmarkFolder) {
-                return <Astro.self isLastInRootFolder={isLastInRootFolder} path={folderPath} depth={depth+1} folder={child} isLastChild={isLastChildOfChildren} isInLastFolder={isLastChild}/>
-             } else {
-                return <Bookmark isLastInRootFolder={isLastInRootFolder} path={folderPath} bookmark={child} depth={depth+1} isLastChild={isLastChildOfChildren} isInLastFolder={isLastChild} />
-             }
-           })
-    }
-</details>
+<a href={folderUrl} class="group" title={folder.name}>
+	<IconText text={folder.name}>
+		<Icon icon="folder" size="1.5rem" className="group-hover:folder-open-icon" />
+	</IconText>
+</a>
