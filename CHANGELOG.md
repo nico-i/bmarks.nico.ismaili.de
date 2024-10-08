@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/nico-i/bmarks.nico.ismaili.de/compare/v1.0.0...v1.0.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* updated deployment path ([880ff9c](https://github.com/nico-i/bmarks.nico.ismaili.de/commit/880ff9c4887d3c0a1005037020f4849bc962162d))
+
 ## 1.0.0 (2024-10-08)
 
 
