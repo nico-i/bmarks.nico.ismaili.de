@@ -4,5 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind({ applyBaseStyles: false, })],
+	site: `https://nico-i.github.io/`,
+	base: `bmarks.nico.ismaili.de`,
+	integrations: [tailwind({ applyBaseStyles: false })],
 });
