@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
  release:
   types: [created]
+ # Trigger on changes to public/bookmarks.json
+ push:
+  paths:
+   - "public/bookmarks.json"
  # Allows you to run this workflow manually from the Actions tab on GitHub.
  workflow_dispatch:
  # Allows external webhook trigger
@@ -22,6 +26,8 @@ jobs:
   steps:
    - name: Checkout your repository using git
      uses: actions/checkout@v4
+   - name: Set repository URL as environment variable
+     run: echo "REPO_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" >> $GITHUB_ENV
    - name: Install, build, and upload your site
      uses: withastro/action@v3
      with:
