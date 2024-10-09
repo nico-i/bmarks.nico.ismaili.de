@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v1.1.0...v1.2.0) (2024-10-09)
+
+
+### Features
+
+* added gh and json icons ([7c21dbf](https://github.com/nico-i/links.nico.ismaili.de/commit/7c21dbf7dff0cb0f3cf3add6b76578b7e37f5dea))
+* added repo url to build ci env ([09d392b](https://github.com/nico-i/links.nico.ismaili.de/commit/09d392b5e684c0f647b24743fc3904e2a9cb0afc))
+
 ## [1.1.0](https://github.com/nico-i/bmarks.nico.ismaili.de/compare/v1.0.1...v1.1.0) (2024-10-09)
 
 
