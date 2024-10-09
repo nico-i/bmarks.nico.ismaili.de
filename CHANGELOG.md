@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/nico-i/bmarks.nico.ismaili.de/compare/v1.0.1...v1.1.0) (2024-10-09)
+
+
+### Features
+
+* added cname file ([bcd89c8](https://github.com/nico-i/bmarks.nico.ismaili.de/commit/bcd89c8b626b54c5a35dcb47ce96a6f3ee8ddcd7))
+
 ## [1.0.1](https://github.com/nico-i/bmarks.nico.ismaili.de/compare/v1.0.0...v1.0.1) (2024-10-08)
 
 
