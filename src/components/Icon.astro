@@ -1,5 +1,13 @@
 ---
-type IconType = "folder" | "open-folder" | "globe" | "moon" | "sun" | "back";
+type IconType =
+	| "folder"
+	| "open-folder"
+	| "globe"
+	| "moon"
+	| "sun"
+	| "back"
+	| "json"
+	| "github";
 
 interface Props {
 	icon: IconType;
@@ -16,6 +24,8 @@ const iconClassByIconType: Record<IconType, string> = {
 	sun: "sun-icon",
 	moon: "moon-icon",
 	back: "back-icon",
+	json: "json-icon",
+	github: "github-icon",
 };
 
 const iconClass = iconClassByIconType[icon];

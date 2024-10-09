@@ -86,9 +86,22 @@ const parentPath =
 				<h1 class="text-4xl font-bold text-center">
 					{folder.name === "" ? "Bookmarks" : folder.name}
 				</h1>
-				<button id="view-mode">
-					<Icon icon="moon" size="2rem" className="dark:sun-icon" />
-				</button>
+				<div class="flex gap-2 items-center">
+					<a href="/bookmarks.json">
+						<Icon icon="json" size="2rem" />
+					</a>
+					<a
+						href={import.meta.env.REPO_URL}
+						referrerpolicy="no-referrer"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Icon icon="github" size="2rem" />
+					</a>
+					<button id="view-mode">
+						<Icon icon="moon" size="2rem" className="dark:sun-icon" />
+					</button>
+				</div>
 			</div>
 			{
 				folder.children.map((child) => {
