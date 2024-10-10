@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v2.1.0...v2.2.0) (2024-10-10)
+
+
+### Features
+
+* added favicon ([ee7e3be](https://github.com/nico-i/links.nico.ismaili.de/commit/ee7e3be52f1922853f6c7faa495328520450be4e))
+* added meta description ([f12f8ee](https://github.com/nico-i/links.nico.ismaili.de/commit/f12f8eec82ec3c9b36c74c1ef22255e8d7232655))
+
 ## [2.1.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v2.0.0...v2.1.0) (2024-10-10)
 
 
