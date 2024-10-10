@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v2.0.0...v2.1.0) (2024-10-10)
+
+
+### Features
+
+* improved a11y ([8c0f5ee](https://github.com/nico-i/links.nico.ismaili.de/commit/8c0f5ee420ceb027b51778d6846dbb0b8b5041e7))
+
 ## [2.0.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v1.3.0...v2.0.0) (2024-10-10)
 
 
