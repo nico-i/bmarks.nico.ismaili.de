@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v1.2.0...v1.3.0) (2024-10-10)
+
+
+### Features
+
+* improved back navigation ([513b9de](https://github.com/nico-i/links.nico.ismaili.de/commit/513b9de4c41c1abc75e588de9286762163ac0005))
+
 ## [1.2.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v1.1.0...v1.2.0) (2024-10-09)
 
 
