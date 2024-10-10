@@ -13,7 +13,7 @@ import IconText from "@/components/IconText.astro";
 
 export async function getStaticPaths() {
 	const repo = new FSBookmarkRepo(bkmks);
-	const bkmksRoot = await repo.getRoot();
+	const rootFolder = await repo.getRoot();
 
 	function recGetFolderStaticPaths(
 		folder: Folder,
@@ -45,8 +45,6 @@ export async function getStaticPaths() {
 
 		return paths;
 	}
-
-	const rootFolder = new Folder("Bookmarks", bkmksRoot);
 
 	const paths = recGetFolderStaticPaths(rootFolder, "", true);
 
