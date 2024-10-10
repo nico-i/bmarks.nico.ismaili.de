@@ -82,18 +82,28 @@ const parentPath =
 					</h1>
 				</div>
 				<div class="flex gap-2 items-center">
-					<a href="/bookmarks.json">
+					<a
+						href="/bookmarks.json"
+						aria-label="Open JSON data file"
+						title="JSON data file"
+					>
 						<Icon icon="json" size="2rem" />
 					</a>
 					<a
 						href={import.meta.env.REPO_URL}
+						aria-label="Open GitHub repository"
+						title="GitHub repository"
 						referrerpolicy="no-referrer"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Icon icon="github" size="2rem" />
 					</a>
-					<button id="view-mode">
+					<button
+						id="view-mode"
+						aria-label="Toggle dark \ light mode"
+						title="Toggle dark \ light mode"
+					>
 						<Icon icon="moon" size="2rem" className="dark:sun-icon" />
 					</button>
 				</div>
