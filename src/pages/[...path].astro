@@ -9,6 +9,7 @@ import { convertNameToSlug } from "@/helper/getNormalizedPath";
 import { Bookmark } from "@/domain/entities/bookmark";
 import { GetStaticPathsResult } from "astro";
 import Icon from "@/components/Icon.astro";
+import IconText from "@/components/IconText.astro";
 
 export async function getStaticPaths() {
 	const repo = new FSBookmarkRepo(bkmks);
@@ -16,10 +17,11 @@ export async function getStaticPaths() {
 
 	function recGetFolderStaticPaths(
 		folder: Folder,
-		path: string
+		path: string,
+		isRoot?: boolean
 	): GetStaticPathsResult {
 		const slug = convertNameToSlug(folder.name);
-		const folderPath = `${path}${slug}/`;
+		const folderPath = isRoot ? "/" : `${path}${slug}/`;
 
 		const paths: GetStaticPathsResult = [
 			{
@@ -29,6 +31,7 @@ export async function getStaticPaths() {
 				props: {
 					folder,
 					slug,
+					isRoot,
 				},
 			},
 		];
@@ -43,9 +46,9 @@ export async function getStaticPaths() {
 		return paths;
 	}
 
-	const rootFolder = new Folder("", bkmksRoot);
+	const rootFolder = new Folder("Bookmarks", bkmksRoot);
 
-	const paths = recGetFolderStaticPaths(rootFolder, "");
+	const paths = recGetFolderStaticPaths(rootFolder, "", true);
 
 	return paths;
 }
@@ -53,10 +56,11 @@ export async function getStaticPaths() {
 interface Props {
 	folder: Folder;
 	slug: string;
+	isRoot: boolean;
 }
 
 const { path } = Astro.params;
-const { folder, slug } = Astro.props;
+const { folder, slug, isRoot } = Astro.props;
 
 const parentPath =
 	"/" + (typeof path === "string" ? path.replace(slug, "") : "");
@@ -73,19 +77,12 @@ const parentPath =
 		class="w-full flex flex-col items-center text-lg dark:bg-stone-900 dark:text-neutral-200 bg-bg dark:bg-dark-bg text-text dark:text-dark-text transition-colors"
 	>
 		<main class="flex flex-col w-full max-w-screen-sm pt-16 gap-2 px-8">
-			<div class="flex justify-between items-center pb-8 gap-1.5">
-				{
-					typeof path === "string" ? (
-						<a href={parentPath}>
-							<Icon icon="back" size="2rem" />
-						</a>
-					) : (
-						<div class="w-8" />
-					)
-				}
-				<h1 class="text-4xl font-bold text-center">
-					{folder.name === "" ? "Bookmarks" : folder.name}
-				</h1>
+			<div class="flex justify-between items-center pb-8">
+				<div class="flex items-center gap-1.5">
+					<h1 class="text-4xl font-bold">
+						{folder.name}
+					</h1>
+				</div>
 				<div class="flex gap-2 items-center">
 					<a href="/bookmarks.json">
 						<Icon icon="json" size="2rem" />
@@ -103,6 +100,16 @@ const parentPath =
 					</button>
 				</div>
 			</div>
+			{
+				!isRoot && (
+					<a href={parentPath}>
+						<IconText text="..">
+							{" "}
+							<Icon icon="back-folder" size="1.5rem" />
+						</IconText>
+					</a>
+				)
+			}
 			{
 				folder.children.map((child) => {
 					if (child instanceof Folder) {
