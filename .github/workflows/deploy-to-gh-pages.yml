@@ -3,8 +3,10 @@ name: Deploy to GitHub Pages
 on:
  release:
   types: [created]
- # Trigger on changes to public/bookmarks.json
  push:
+  paths:
+   - "public/bookmarks.json"
+ pull_request:
   paths:
    - "public/bookmarks.json"
  # Allows you to run this workflow manually from the Actions tab on GitHub.
