@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v1.3.0...v2.0.0) (2024-10-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* updated parsing logic to use bkmks 2.0.0
+
+### Features
+
+* updated parsing logic to use bkmks 2.0.0 ([cbd8bcb](https://github.com/nico-i/links.nico.ismaili.de/commit/cbd8bcbbcf3c481d34614a7e2b1b52da0e4b5769))
+
 ## [1.3.0](https://github.com/nico-i/links.nico.ismaili.de/compare/v1.2.0...v1.3.0) (2024-10-10)
 
 
